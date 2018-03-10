@@ -1,0 +1,218 @@
+{
+	"info": {
+		"name": "Assignment 3",
+		"_postman_id": "16c0ef48-571c-aa77-266a-353e67f1c5e7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"admin\",\n\t\"username\" : \"nickt95\",\n\t\"password\" : \"1234\"\n}"
+				},
+				"url": {
+					"raw": "https://secret-hamlet-43700.herokuapp.com/signup",
+					"protocol": "https",
+					"host": [
+						"secret-hamlet-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signup"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "sign-in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35beee4c-c201-4424-ba28-a07289898b25",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"me\",\n\t\"username\" : \"name\",\n\t\"password\" : \"1234\"\n}"
+				},
+				"url": {
+					"raw": "https://secret-hamlet-43700.herokuapp.com/signin",
+					"protocol": "https",
+					"host": [
+						"secret-hamlet-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signin"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhYTMxZmZhMTg3YTIxMWFjMDdhOTRkOCIsInVzZXJuYW1lIjoibmFtZSIsImlhdCI6MTUyMDY0MDAwNH0.BkIL_8X1HdfPXro9mLlCyb5_sMji8m0Y3MR-ls2ixXM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Fuck 2: The Fuckening\",\n\t\"year\": 2009,\n\t\"genre\": \"Comedy\",\n\t\"actors\":\n\t[\n\t\t{\"actorName\": \"M. Jones\", \"characterName\": \"Joe\"},\n\t\t{\"actorName\": \"G. Free\", \"characterName\": \"Moe\"},\n\t\t{\"actorName\": \"L. Jones\", \"characterName\": \"Jane\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "https://secret-hamlet-43700.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"secret-hamlet-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Movie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhYTMxZmZhMTg3YTIxMWFjMDdhOTRkOCIsInVzZXJuYW1lIjoibmFtZSIsImlhdCI6MTUyMDY0MDAwNH0.BkIL_8X1HdfPXro9mLlCyb5_sMji8m0Y3MR-ls2ixXM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Bad Days\",\n\t\"year\": 1984,\n\t\"genre\": \"Drama\",\n\t\"actors\":\n\t[\n\t\t{\"actorName\": \"M. Jones\", \"characterName\": \"Joe\"},\n\t\t{\"actorName\": \"G. Free\", \"characterName\": \"Moe\"},\n\t\t{\"actorName\": \"L. Jones\", \"characterName\": \"Jane\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "https://secret-hamlet-43700.herokuapp.com/movies?id=5aa3050f425f714368effef4",
+					"protocol": "https",
+					"host": [
+						"secret-hamlet-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5aa3050f425f714368effef4",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhYTMxZmZhMTg3YTIxMWFjMDdhOTRkOCIsInVzZXJuYW1lIjoibmFtZSIsImlhdCI6MTUyMDY0MDAwNH0.BkIL_8X1HdfPXro9mLlCyb5_sMji8m0Y3MR-ls2ixXM"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://secret-hamlet-43700.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"secret-hamlet-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhYTMxZmZhMTg3YTIxMWFjMDdhOTRkOCIsInVzZXJuYW1lIjoibmFtZSIsImlhdCI6MTUyMDY0MDAwNH0.BkIL_8X1HdfPXro9mLlCyb5_sMji8m0Y3MR-ls2ixXM"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://secret-hamlet-43700.herokuapp.com/movies?id=5aa3050f425f714368effef4",
+					"protocol": "https",
+					"host": [
+						"secret-hamlet-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5aa3050f425f714368effef4",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

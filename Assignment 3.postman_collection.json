@@ -94,10 +94,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Fuck 2: The Fuckening\",\n\t\"year\": 2009,\n\t\"genre\": \"Comedy\",\n\t\"actors\":\n\t[\n\t\t{\"actorName\": \"M. Jones\", \"characterName\": \"Joe\"},\n\t\t{\"actorName\": \"G. Free\", \"characterName\": \"Moe\"},\n\t\t{\"actorName\": \"L. Jones\", \"characterName\": \"Jane\"}\n\t]\n}"
+					"raw": "{\n\t\"movieID\" : \"5ab560e797811a0004bb199c\",\n\t\"username\" : \"name\",\n\t\"quote\" : \"eh\",\n\t\"stars\" : 3\n}"
 				},
 				"url": {
-					"raw": "https://secret-hamlet-43700.herokuapp.com/movies",
+					"raw": "https://secret-hamlet-43700.herokuapp.com/movies?doReviews=true",
 					"protocol": "https",
 					"host": [
 						"secret-hamlet-43700",
@@ -106,6 +106,13 @@
 					],
 					"path": [
 						"movies"
+					],
+					"query": [
+						{
+							"key": "doReviews",
+							"value": "true",
+							"equals": true
+						}
 					]
 				},
 				"description": ""
@@ -160,12 +167,12 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhYTMxZmZhMTg3YTIxMWFjMDdhOTRkOCIsInVzZXJuYW1lIjoibmFtZSIsImlhdCI6MTUyMDY0MDAwNH0.BkIL_8X1HdfPXro9mLlCyb5_sMji8m0Y3MR-ls2ixXM"
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhYTMxZmZhMTg3YTIxMWFjMDdhOTRkOCIsInVzZXJuYW1lIjoibmFtZSIsImlhdCI6MTUyMjQ0NzA4Mn0.h1L7qbm4iiy6jn6t7RrgbBtsRnMPACXz82roxFfCMNw"
 					}
 				],
 				"body": {},
 				"url": {
-					"raw": "https://secret-hamlet-43700.herokuapp.com/movies",
+					"raw": "https://secret-hamlet-43700.herokuapp.com/movies?doReviews=true",
 					"protocol": "https",
 					"host": [
 						"secret-hamlet-43700",
@@ -174,6 +181,13 @@
 					],
 					"path": [
 						"movies"
+					],
+					"query": [
+						{
+							"key": "doReviews",
+							"value": "true",
+							"equals": true
+						}
 					]
 				},
 				"description": ""
